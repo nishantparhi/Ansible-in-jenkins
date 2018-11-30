@@ -1,0 +1,21 @@
+---
+- name: installation of 3 packages
+  hosts: "localhost"
+  become: yes
+  become_user: root
+  tasks:
+  - name: Install nano
+    dnf:
+      name: nano
+      state: latest
+
+  - name: Install apache
+    dnf:
+      name: httpd
+      state: latest
+
+  - name: Install htop
+    dnf:
+      name: htop
+      state: latest
+...
